@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
-:root {
-  /* ========================================
-     BRAND / PRIMARY
-     ======================================== */
-
+/*
+ * Paleta Obra360.
+ * Declarada em @theme para o Tailwind v4 gerar utilitários a partir dela:
+ *   bg-brand-navy, text-brand-gold, border-border, bg-success-background, etc.
+ */
+@theme {
+  /* BRAND / PRIMARY */
   --color-brand-gold: #d4af37;
   --color-brand-gold-light: #c5a059;
   --color-brand-gold-hover: #b8860b;
@@ -12,47 +14,58 @@
   --color-brand-navy: #0b192c;
   --color-brand-navy-light: #1e2a38;
 
-  /* ========================================
-     BACKGROUNDS / SURFACES
-     ======================================== */
-
+  /* BACKGROUNDS / SURFACES */
   --color-background: #f4f6f9;
   --color-surface: #ffffff;
 
-  /* ========================================
-     BORDERS
-     ======================================== */
-
+  /* BORDERS */
   --color-border: #e2e8f0;
 
-  /* ========================================
-     TEXT
-     ======================================== */
-
+  /* TEXT */
   --color-text-primary: #1e293b;
   --color-text-secondary: #64748b;
 
-  /* ========================================
-     STATUS
-     ======================================== */
-
-  /* Success */
+  /* STATUS */
   --color-success: #10b981;
   --color-success-background: #ecfdf5;
 
-  /* Warning */
   --color-warning: #f59e0b;
   --color-warning-background: #fef3c7;
 
-  /* Error */
   --color-danger: #ef4444;
   --color-danger-background: #fee2e2;
 
-  /* Info */
   --color-info: #3b82f6;
   --color-info-background: #eff6ff;
 }
 
+@theme inline {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Âncoras não ficam escondidas debaixo do header fixo */
+section[id] {
+  scroll-margin-top: 4.5rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-gold);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
