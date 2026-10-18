@@ -1,9 +1,7 @@
-import { Header } from "@/components/layout/Header";
-
 export default function LandingPage() {
   return (
     <>
-      <Header/>
+      <h1>obriva</h1>
     </>
   );
 }
