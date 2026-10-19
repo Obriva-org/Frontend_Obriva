@@ -1,7 +1,9 @@
+import { Hero } from "@/components/landing/Hero";
+
 export default function LandingPage() {
   return (
     <>
-      <h1>obriva</h1>
+      <Hero/>
     </>
   );
 }
