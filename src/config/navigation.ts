@@ -29,7 +29,6 @@ export const footerNav: { title: string; links: NavItem[] }[] = [
     links: [
       { label: "Entrar", href: "/login" },
       { label: "Criar conta", href: "/register" },
-      { label: "Recuperar palavra-passe", href: "/forgot-password" },
     ],
   },
 ];
