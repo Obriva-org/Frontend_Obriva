@@ -21,10 +21,10 @@ export function Hero() {
         <div className="absolute inset-0 bg-brand-navy/80 lg:hidden" />
 
         {/* Desktop: azul-marinho à esquerda, foto a ganhar destaque à direita */}
-        <div className="absolute inset-0 hidden bg-gradient-to-r from-brand-navy from-15% via-brand-navy/70 via-45% to-transparent lg:block" />
+        <div className="absolute inset-0 hidden bg-linear-to-r from-brand-navy from-15% via-brand-navy/70 via-45% to-transparent lg:block" />
 
         {/* Funde o topo e a base com as secções vizinhas */}
-        <div className="absolute inset-0 hidden bg-gradient-to-b from-brand-navy/30 via-transparent to-brand-navy/30 lg:block" />
+        <div className="absolute inset-0 hidden bg-linear-to-b from-brand-navy/30 via-transparent to-brand-navy/30 lg:block" />
       </div>
 
       <Container className="relative z-10 py-20 sm:py-24 lg:py-32">
