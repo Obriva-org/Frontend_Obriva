@@ -50,6 +50,7 @@ export function Footer() {
           ))}
         </div>
 
+
         <div className="mt-12 border-t border-white/10 pt-6 text-xs">
           © {new Date().getFullYear()} {siteConfig.name}. Todos os direitos
           reservados.
