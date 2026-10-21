@@ -3,6 +3,7 @@ import { Hero } from "@/components/landing/Hero";
 import { HowItWorks } from "@/components/landing/HowItWorks";
 import { ProblemStrip } from "@/components/landing/ProblemStrip";
 import { Roles } from "@/components/landing/Roles";
+import { Security } from "@/components/landing/Security";
 
 export default function LandingPage() {
   return (
@@ -12,6 +13,7 @@ export default function LandingPage() {
       <Features/>
       <HowItWorks/>
       <Roles/>
+      <Security/>
     </>
   );
 }
