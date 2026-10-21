@@ -1,11 +1,20 @@
 import Link from "next/link";
+import { cacheLife } from "next/cache";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Logo } from "@/components/layout/Logo";
 import { Container } from "@/components/ui/Container";
 import { footerNav } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
 
-export function Footer() {
+async function getCurrentYear() {
+  "use cache";
+  cacheLife("days");
+  return new Date().getFullYear();
+}
+
+export async function Footer() {
+  const year = await getCurrentYear();
+
   return (
     <footer className="bg-brand-navy text-white/70">
       <Container className="py-14">
@@ -50,10 +59,8 @@ export function Footer() {
           ))}
         </div>
 
-
         <div className="mt-12 border-t border-white/10 pt-6 text-xs">
-          © {new Date().getFullYear()} {siteConfig.name}. Todos os direitos
-          reservados.
+          © {year} {siteConfig.name}. Todos os direitos reservados.
         </div>
       </Container>
     </footer>
