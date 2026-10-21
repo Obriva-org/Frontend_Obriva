@@ -5,8 +5,8 @@ import { Container } from "@/components/ui/Container";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-136 items-center overflow-hidden bg-brand-navy lg:min-h-160">
-      {/* Foto da equipa: fundo da secção, ancorada à direita */}
+    <section className="relative flex min-h-136 items-center overflow-hidden bg-brand-navy lg:min-h-162">
+      {/* Foto da equipa */}
       <div className="absolute inset-y-0 right-0 w-full lg:w-[78%]">
         <Image
           src="/images/gumbal.jpg"
@@ -16,14 +16,11 @@ export function Hero() {
           sizes="(min-width: 1024px) 78vw, 100vw"
           className="object-cover object-center"
         />
-
-        {/* Telemóvel/tablet: véu uniforme para o texto ficar legível */}
+        
         <div className="absolute inset-0 bg-brand-navy/80 lg:hidden" />
-
-        {/* Desktop: azul-marinho à esquerda, foto a ganhar destaque à direita */}
+        
         <div className="absolute inset-0 hidden bg-linear-to-r from-brand-navy from-15% via-brand-navy/70 via-45% to-transparent lg:block" />
-
-        {/* Funde o topo e a base com as secções vizinhas */}
+        
         <div className="absolute inset-0 hidden bg-linear-to-b from-brand-navy/30 via-transparent to-brand-navy/30 lg:block" />
       </div>
 

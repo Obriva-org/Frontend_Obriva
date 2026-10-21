@@ -1,5 +1,6 @@
 import { Faq } from "@/components/landing/Faq";
 import { Features } from "@/components/landing/Features";
+import { FinalCta } from "@/components/landing/FinalCta";
 import { Hero } from "@/components/landing/Hero";
 import { HowItWorks } from "@/components/landing/HowItWorks";
 import { ProblemStrip } from "@/components/landing/ProblemStrip";
@@ -16,6 +17,7 @@ export default function LandingPage() {
       <Roles/>
       <Security/>
       <Faq/>
+      <FinalCta/>
     </>
   );
 }
